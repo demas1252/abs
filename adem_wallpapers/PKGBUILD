@@ -1,0 +1,18 @@
+# Contributor: Andrey Demidov < andrey DOT demidov AT gmail DOT com >
+
+pkgname=adem_wallpapers
+pkgver=1.0
+pkgrel=1
+pkgdesc="A Nice Wallpapers"
+arch=( 'any' )
+# url="http://www.archlinux.org/"
+license=('CCPL:by-nc-sa')
+# install=adem_wallpapers.install
+source=("/home/demas/artefacts/dev/abs/${pkgname}-${pkgver}.tar.gz" )
+build() {
+  cd $srcdir/wallpapers
+  mkdir -p $pkgdir/usr/share/wallpapers
+
+  install -m644 *.{jpg,png} $pkgdir/usr/share/wallpapers
+}
+md5sums=('00b45043614f6df242af0909cac63f6b')

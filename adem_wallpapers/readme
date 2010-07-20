@@ -1,0 +1,5 @@
+tar cvf adem_wallpapers-1.0.tar wallpapers/*
+gzip adem_wallpapers-1.0.tar
+из PKGBUILD выносим контрольную сумму
+makepkg -g >> PKGBUILD
+makepkg -s
